@@ -1,0 +1,7 @@
+.word {
+	color: #a33;
+	display: block;
+	padding: 0.125rem 0.25rem;
+	text-decoration: none;
+	position: relative;
+}

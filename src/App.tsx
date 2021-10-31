@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { ReactElement, useState } from 'react';
+import WordCloud from './components/word-cloud.component';
+import { WordCloudObject } from './types/wordcloud';
+import { getWordCount } from './algorithm/getWordCount';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(): ReactElement {
+	const [ wordCloud, setWordCloud ] = useState<WordCloudObject>({});
+	const [ text, setText ] = useState('');
+
+	const handleSubmit = (e: React.FormEvent<EventTarget>) => {
+		e.preventDefault();
+		setWordCloud(getWordCount(text));
+	};
+
+	const handleChange = (e: React.FormEvent<EventTarget>) => {
+		let target = e.target as HTMLInputElement;
+		setText(target.value);
+	};
+
+	return (
+		<div>
+			<form onSubmit={handleSubmit}>
+				<textarea
+					onChange={handleChange}
+					style={{
+						height: '130px',
+						width: '100%',
+						padding: '1rem'
+					}}
+					placeholder="Enter text"
+				/>
+				<button type="submit">Submit</button>
+			</form>
+			<WordCloud wordCloud={wordCloud} />
+		</div>
+	);
 }
 
 export default App;
