@@ -20,18 +20,32 @@ function App(): ReactElement {
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
+				<section style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
+			    <form onSubmit={handleSubmit} style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+				<p style={{ color: "#efefef", fontSize: "2rem"}}>Enter text that you want to generate a word cloud for </p>
 				<textarea
 					onChange={handleChange}
 					style={{
-						height: '130px',
-						width: '100%',
-						padding: '1rem'
+						height: '50vh',
+						width: '95%',
+						padding: '1rem',
+						marginBottom: '.65rem'
 					}}
-					placeholder="Enter text"
+					placeholder="Place text here..."
 				/>
-				<button type="submit">Submit</button>
+				<button 
+				    style={{
+						padding: '.5rem',
+						backgroundColor: 'black',
+						color: 'rgb(201, 201, 201)',
+						width: "50%", 
+						alignSelf: "center"
+					}}
+				    type="submit">
+						Generate
+				</button>
 			</form>
+			</section>
 			<WordCloud wordCloud={wordCloud} />
 		</div>
 	);

@@ -2,6 +2,7 @@ export const filteredWords: { [key: string]: string } = {
 	i: 'i',
 	I: 'I',
 	a: 'a',
+	all: 'all',
 	also: 'also',
 	am: 'am',
 	an: 'an',
