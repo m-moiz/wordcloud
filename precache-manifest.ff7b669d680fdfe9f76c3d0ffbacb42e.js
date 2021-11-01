@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d06c541878e341830e843cf75cc93f6",
+    "revision": "b752be2dd581f05d87637afb323a7327",
     "url": "/wordcloud/index.html"
   },
   {
-    "revision": "cc99d8486a1ad92a8f86",
+    "revision": "24b89ba7053af6d8445e",
     "url": "/wordcloud/static/css/main.d3b77e97.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wordcloud/static/js/2.bd1cae0a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cc99d8486a1ad92a8f86",
-    "url": "/wordcloud/static/js/main.54236d3a.chunk.js"
+    "revision": "24b89ba7053af6d8445e",
+    "url": "/wordcloud/static/js/main.8322e3e8.chunk.js"
   },
   {
     "revision": "d23c4c7ecef36e614258",
