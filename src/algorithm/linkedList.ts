@@ -51,7 +51,7 @@ export class LinkedList {
 		}
 
 		if (this.hasSingleNode()) {
-			console.log('h');
+			
 			this.head = null;
 			this.tail = null;
 			return;

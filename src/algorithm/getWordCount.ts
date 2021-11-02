@@ -12,6 +12,8 @@ export function getWordCount(str: string) {
 
 	str = removePunctuation(str); //0(5n)
 
+	str = str.toLowerCase();
+
 	let set = new Set();
 	let result: { [key: string]: number } = {};
 	let words = str.split(' ');
